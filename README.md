@@ -4,7 +4,7 @@
 
 Timba loca es un circuito que simula el juego "craps" de dados, primero se ingresa una apuesta, luego se confirma dicha apuesta, se tiran los dados (presionando una tecla cualquiera del teclado) y se obtiene el resultado y con ello se sabe si se gano o no.
 Adicionalmente se agrega un una perilla desde la cual se permite hacer trampa y poder forzar el resultado del que saldra de la apuesta. 
-Se agrega a este componente para hacer trampa un led que indica según su luminosidad si se ganará o no la apuesta.
+Se agrega a este componente para hacer trampa un led que indica según su luminosidad si se ganará o no la apuesta. Si no esta iluminado indica que se perderá si el tiro no se modifica haciendo trampa, si prendido se doblara la apuesta sacando algún valor entre 3-6 y 8-10. Finalmente si está completamente prendido se obtendra 2 o 12.
 También está presente una bocina para darle música al juego.
 
 ## reglas del craps
@@ -12,11 +12,17 @@ También está presente una bocina para darle música al juego.
 se tiran dos dados (con caras de valor 1 a 6) y la suma de estos produce los siguientes resultados en las apuestas:
 
 2: se gana el doble de lo apostado y termina el juego
+
 3 a 6: se gana el doble de lo apostado y se sigue jugando
+
 7: se pierde todo lo apostado hasta el momento y termina el juego
+
 8 a 10: se gana el doble de lo apostado y se sigue jugando
+
 11: se pierde todo lo apostado hasta el momento y termina el juego
+
 12: se gana el triple de lo apostado y termina el juego
+
 
 Si se tiraron los dados y NO se termino el juego, se "marca" el tiro. Es decir, que si en cualquiera de los siguientes tiros se vuelve a obtener la misma suma de los dados, también se termina el juego.
 
